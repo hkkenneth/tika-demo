@@ -8,6 +8,7 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
+import org.apache.tika.parser.DefaultParser;
 
 public class HelloWorld {
 
@@ -24,6 +25,14 @@ public class HelloWorld {
                 parser.parse(tikaStream, handler, metadata, context);
                 System.out.println("File content : " + handler.toString());
                 printMeta(metadata);
+
+                if (parser instanceof DefaultParser) {
+                    System.out.println("It is a DefaultParser");
+                } else if (parser instanceof AutoDetectParser) {
+                    System.out.println("It is not a DefaultParser, but an AutoDetectParser");
+                } else {
+                    System.out.println("It is neither a DefaultParser nor an AutoDetectParser");
+                }
                 System.out.println("============================");
             }
         }

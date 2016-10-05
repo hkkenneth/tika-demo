@@ -1,0 +1,10 @@
+Even if 
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.DefaultParser]
+the class of parser is actually AutoDetectParser 
+because AutoDetectParser is a subclass of rg.apache.tika.parser.CompositeParser
+
+which
+
+Composite parser that delegates parsing tasks to a component parser based on the declared content type of the incoming document. A fallback parser is defined for cases where a parser for the given content type is not available.
+(https://tika.apache.org/1.13/api/org/apache/tika/parser/CompositeParser.html)
+

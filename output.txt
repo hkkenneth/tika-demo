@@ -1,0 +1,53 @@
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:run
+File content : 
+This	is	really	a	title	
+TITLE	IS	HERE	
+This	is	a	simple	document	
+	
+This	is	a	multi-line	document	
+	
+With	more	text	
+
+
+
+Meta name: [date], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [pdf:PDFVersion], Meta value: [1.3]
+Meta name: [xmp:CreatorTool], Meta value: [Word]
+Meta name: [Keywords], Meta value: []
+Meta name: [access_permission:modify_annotations], Meta value: [true]
+Meta name: [access_permission:can_print_degraded], Meta value: [true]
+Meta name: [subject], Meta value: []
+Meta name: [dcterms:created], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [Last-Modified], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [dcterms:modified], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [dc:format], Meta value: [application/pdf; version=1.3]
+Meta name: [title], Meta value: [Microsoft Word - testDoc.docx]
+Meta name: [Last-Save-Date], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [access_permission:fill_in_form], Meta value: [true]
+Meta name: [meta:save-date], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [pdf:encrypted], Meta value: [false]
+Meta name: [dc:title], Meta value: [Microsoft Word - testDoc.docx]
+Meta name: [modified], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [Content-Type], Meta value: [application/pdf]
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.DefaultParser]
+Meta name: [dc:subject], Meta value: []
+Meta name: [meta:creation-date], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [created], Meta value: [Thu Aug 25 15:34:20 BST 2016]
+Meta name: [access_permission:extract_for_accessibility], Meta value: [true]
+Meta name: [access_permission:assemble_document], Meta value: [true]
+Meta name: [xmpTPg:NPages], Meta value: [1]
+Meta name: [Creation-Date], Meta value: [2016-08-25T14:34:20Z]
+Meta name: [access_permission:extract_content], Meta value: [true]
+Meta name: [access_permission:can_print], Meta value: [true]
+Meta name: [meta:keyword], Meta value: []
+Meta name: [producer], Meta value: [Mac OS X 10.11.6 Quartz PDFContext]
+Meta name: [access_permission:can_modify], Meta value: [true]
+It is not a DefaultParser, but an AutoDetectParser
+============================
+
+BUILD SUCCESSFUL
+
+Total time: 1.69 secs
