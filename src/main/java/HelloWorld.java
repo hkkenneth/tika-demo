@@ -6,6 +6,8 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
+import org.apache.tika.detect.CompositeDetector;
+import org.apache.tika.detect.Detector;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 import org.apache.tika.parser.DefaultParser;
@@ -26,14 +28,26 @@ public class HelloWorld {
                 System.out.println("File content : " + handler.toString());
                 printMeta(metadata);
 
-                if (parser instanceof DefaultParser) {
-                    System.out.println("It is a DefaultParser");
-                } else if (parser instanceof AutoDetectParser) {
-                    System.out.println("It is not a DefaultParser, but an AutoDetectParser");
-                } else {
-                    System.out.println("It is neither a DefaultParser nor an AutoDetectParser");
-                }
+                // Print which detector are used
+                recursePrintDetector(((AutoDetectParser) parser).getDetector(), null);
                 System.out.println("============================");
+            }
+        }
+    }
+
+    private static void recursePrintDetector(Detector self, Detector parent) {
+        if (parent == null) {
+            System.out.println("Root Detector : " + self.getClass().getName());
+        } else {
+          System.out.println("Parent Detector : " +
+                             parent.getClass().getName() +
+                             " Self : " +
+                             self.getClass().getName());
+        }
+
+        if (self instanceof CompositeDetector) {
+            for (Detector child: ((CompositeDetector) self).getDetectors()) {
+                recursePrintDetector(child, self);
             }
         }
     }
