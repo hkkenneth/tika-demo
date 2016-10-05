@@ -30,7 +30,9 @@ public class HelloWorld {
                 ParseContext context = new ParseContext();
 
                 // Enable Tesseract
-                TesseractOCRConfig ocrconfig = new TesseractOCRConfig();
+                TesseractOCRConfig ocrconfig = new TesseractOCRConfig(
+                    HelloWorld.class.getResourceAsStream(
+                        "TesseractOCRConfig.properties"));
                 System.out.printf("TesseractOCRConfig:\n%s\n%d %d\n%s\n%s\n%s\n%d\n",
                                   ocrconfig.getLanguage(),
                                   ocrconfig.getMaxFileSizeToOcr(),
