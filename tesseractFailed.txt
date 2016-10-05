@@ -1,0 +1,19 @@
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:run
+TesseractOCRConfig:
+eng
+2147483647 0
+1
+
+
+120
+File content : 
+
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.EmptyParser]
+============================
+
+BUILD SUCCESSFUL
+
+Total time: 1.135 secs

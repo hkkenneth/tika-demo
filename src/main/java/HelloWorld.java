@@ -12,6 +12,9 @@ import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 import org.apache.tika.config.TikaConfig;
+import org.apache.tika.parser.ocr.TesseractOCRConfig;
+import org.apache.tika.parser.ocr.TesseractOCRParser;
+
 
 public class HelloWorld {
 
@@ -20,20 +23,25 @@ public class HelloWorld {
             try (InputStream stream = HelloWorld.class.getResourceAsStream(s);
                  TikaInputStream tikaStream = TikaInputStream.get(stream)) {
 
-                // Mess with media type mapping
-                TikaConfig config = new TikaConfig(HelloWorld.class.getResource("tika-config.xml"));
-                Parser parser = new AutoDetectParser(config);
+                // Try to run this for testTiff.tiff
+                Parser parser = new TesseractOCRParser();
                 BodyContentHandler handler = new BodyContentHandler();
                 Metadata metadata = new Metadata();
                 ParseContext context = new ParseContext();
-                context.set(TikaConfig.class, config);
 
-                // Can we get EmptyParser from this?
-                // No... we get Parser for PDF: org.apache.tika.parser.CompositeParser
-                AutoDetectParser autoParser = ((AutoDetectParser) parser);
-                MediaType mt = MediaType.application("pdf");
-                Parser pdfParser = autoParser.getParsers().get(mt);
-                System.out.println("Parser for PDF: " + pdfParser.getClass().getName());
+                // Enable Tesseract
+                TesseractOCRConfig ocrconfig = new TesseractOCRConfig();
+                System.out.printf("TesseractOCRConfig:\n%s\n%d %d\n%s\n%s\n%s\n%d\n",
+                                  ocrconfig.getLanguage(),
+                                  ocrconfig.getMaxFileSizeToOcr(),
+                                  ocrconfig.getMinFileSizeToOcr(),
+                                  ocrconfig.getPageSegMode(),
+                                  ocrconfig.getTessdataPath(),
+                                  ocrconfig.getTesseractPath(),
+                                  ocrconfig.getTimeout());
+
+                context.set(TesseractOCRConfig.class, ocrconfig);
+                // Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.EmptyParser]
 
                 //parsing the file
                 parser.parse(tikaStream, handler, metadata, context);
