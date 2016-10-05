@@ -1,17 +1,21 @@
-import java.io.InputStream;
-import org.apache.tika.Tika;
-
-import java.io.IOException;
-import org.apache.tika.exception.TikaException;
-import org.xml.sax.SAXException;
+import org.apache.tika.language.LanguageIdentifier;
 
 public class HelloWorld {
 
-    public static void main(String[] args) throws IOException, SAXException, TikaException {
-        Tika tika = new Tika();
-        try (InputStream stream = HelloWorld.class.getResourceAsStream(args[0])) {
-            System.out.println(tika.parseToString(stream));
-        }
-    }
+    public static void main(String args[]) {
 
+        LanguageIdentifier identifier = new LanguageIdentifier("this is english");
+        String language = identifier.getLanguage();
+        System.out.println("Language of the given content is : " + language);
+
+        // French
+        identifier = new LanguageIdentifier("J’ achète du pain tous les jours.");
+        language = identifier.getLanguage();
+        System.out.println("Language of the given content is : " + language);
+
+        // Spanish, but tika got it wrong (detected as 'gl': Galician language)
+        identifier = new LanguageIdentifier("Por favor, ¿me podría dar un poquito de perejil?");
+        language = identifier.getLanguage();
+        System.out.println("Language of the given content is : " + language);
+    }
 }
