@@ -23,10 +23,16 @@ public class HelloWorld {
                 //parsing the file
                 parser.parse(tikaStream, handler, metadata, context);
                 System.out.println("File content : " + handler.toString());
-
-
+                printMeta(metadata);
                 System.out.println("============================");
             }
+        }
+    }
+
+    private static void printMeta(Metadata metadata) {
+        for (String name: metadata.names()) {
+            System.out.printf("Meta name: [%s], Meta value: [%s]\n", name,
+                               metadata.get(name));
         }
     }
 
