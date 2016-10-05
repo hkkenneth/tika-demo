@@ -27,6 +27,13 @@ public class HelloWorld {
                 Metadata metadata = new Metadata();
                 ParseContext context = new ParseContext();
 
+                // Can we get EmptyParser from this?
+                // No... we get Parser for PDF: org.apache.tika.parser.CompositeParser
+                AutoDetectParser autoParser = ((AutoDetectParser) parser);
+                MediaType mt = MediaType.application("pdf");
+                Parser pdfParser = autoParser.getParsers().get(mt);
+                System.out.println("Parser for PDF: " + pdfParser.getClass().getName());
+
                 //parsing the file
                 parser.parse(tikaStream, handler, metadata, context);
                 System.out.println("File content : " + handler.toString());
