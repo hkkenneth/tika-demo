@@ -1,0 +1,61 @@
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:run
+File content : This is really a title
+TITLE IS HERE
+This is a simple document
+
+This is a multi-line document
+
+With more text
+
+Meta name: [date], Meta value: [2016-08-25T14:33:00Z]
+Meta name: [cp:revision], Meta value: [5]
+Meta name: [Total-Time], Meta value: [4]
+Meta name: [extended-properties:AppVersion], Meta value: [15.0000]
+Meta name: [meta:paragraph-count], Meta value: [1]
+Meta name: [meta:word-count], Meta value: [16]
+Meta name: [dc:creator], Meta value: [Microsoft Office User]
+Meta name: [Word-Count], Meta value: [16]
+Meta name: [dcterms:created], Meta value: [2016-08-25T14:25:00Z]
+Meta name: [meta:line-count], Meta value: [1]
+Meta name: [Last-Modified], Meta value: [2016-08-25T14:33:00Z]
+Meta name: [dcterms:modified], Meta value: [2016-08-25T14:33:00Z]
+Meta name: [Last-Save-Date], Meta value: [2016-08-25T14:33:00Z]
+Meta name: [meta:character-count], Meta value: [94]
+Meta name: [Template], Meta value: [Normal.dotm]
+Meta name: [Line-Count], Meta value: [1]
+Meta name: [Paragraph-Count], Meta value: [1]
+Meta name: [meta:save-date], Meta value: [2016-08-25T14:33:00Z]
+Meta name: [meta:character-count-with-spaces], Meta value: [109]
+Meta name: [Application-Name], Meta value: [Microsoft Macintosh Word]
+Meta name: [extended-properties:TotalTime], Meta value: [4]
+Meta name: [modified], Meta value: [2016-08-25T14:33:00Z]
+Meta name: [Content-Type], Meta value: [application/vnd.openxmlformats-officedocument.wordprocessingml.document]
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.CompositeParser]
+Meta name: [creator], Meta value: [Microsoft Office User]
+Meta name: [meta:author], Meta value: [Microsoft Office User]
+Meta name: [meta:creation-date], Meta value: [2016-08-25T14:25:00Z]
+Meta name: [extended-properties:Application], Meta value: [Microsoft Macintosh Word]
+Meta name: [meta:last-author], Meta value: [Microsoft Office User]
+Meta name: [Creation-Date], Meta value: [2016-08-25T14:25:00Z]
+Meta name: [xmpTPg:NPages], Meta value: [1]
+Meta name: [Character-Count-With-Spaces], Meta value: [109]
+Meta name: [Last-Author], Meta value: [Microsoft Office User]
+Meta name: [Character Count], Meta value: [94]
+Meta name: [Page-Count], Meta value: [1]
+Meta name: [Revision-Number], Meta value: [5]
+Meta name: [Application-Version], Meta value: [15.0000]
+Meta name: [extended-properties:Template], Meta value: [Normal.dotm]
+Meta name: [Author], Meta value: [Microsoft Office User]
+Meta name: [meta:page-count], Meta value: [1]
+============================
+File content : 
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.CompositeParser]
+Meta name: [Content-Type], Meta value: [application/pdf]
+============================
+
+BUILD SUCCESSFUL
+
+Total time: 1.699 secs

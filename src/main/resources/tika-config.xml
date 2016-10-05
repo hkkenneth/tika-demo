@@ -1,0 +1,11 @@
+<properties>
+    <parsers>
+        <parser class="org.apache.tika.parser.DefaultParser">
+            <mime-exclude>application/pdf</mime-exclude>
+        </parser>
+        <!-- Disable PDF -->
+        <parser class="org.apache.tika.parser.EmptyParser">
+            <mime>application/pdf</mime>
+        </parser>
+    </parsers>
+</properties>

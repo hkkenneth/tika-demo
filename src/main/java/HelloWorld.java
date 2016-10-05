@@ -11,6 +11,7 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
+import org.apache.tika.config.TikaConfig;
 
 public class HelloWorld {
 
@@ -18,7 +19,10 @@ public class HelloWorld {
         for (String s: args) {
             try (InputStream stream = HelloWorld.class.getResourceAsStream(s);
                  TikaInputStream tikaStream = TikaInputStream.get(stream)) {
-                Parser parser = new AutoDetectParser();
+
+                // Mess with media type mapping
+                TikaConfig config = new TikaConfig(HelloWorld.class.getResource("tika-config.xml"));
+                Parser parser = new AutoDetectParser(config);
                 BodyContentHandler handler = new BodyContentHandler();
                 Metadata metadata = new Metadata();
                 ParseContext context = new ParseContext();
@@ -28,28 +32,8 @@ public class HelloWorld {
                 System.out.println("File content : " + handler.toString());
                 printMeta(metadata);
 
-                // Print which media type registry used
-                AutoDetectParser autoParser = ((AutoDetectParser) parser);
-                MediaTypeRegistry mtr = autoParser.getMediaTypeRegistry();
-                MediaTypeRegistry defaultMTR = MediaTypeRegistry.getDefaultRegistry();
-                boolean isDefaultMTRUsed = mtr.equals(defaultMTR);
-                if (isDefaultMTRUsed) {
-                    System.out.println("Default MTR used");
-                } else {
-                    System.out.println("Default MTR not used");
-                    System.out.println("MTR used:");
-                    printMtr(mtr);
-                }
-                System.out.println("Default MTR:");
-                printMtr(defaultMTR);
                 System.out.println("============================");
             }
-        }
-    }
-
-    private static void printMtr(MediaTypeRegistry mtr) {
-        for (MediaType mt: mtr.getTypes()) {
-            System.out.printf("Media type name: [%s]\n", mt.toString());
         }
     }
 

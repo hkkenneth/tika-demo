@@ -16,3 +16,9 @@ Fallback: org.apache.tika.parser.EmptyParser
 
 Dummy parser that always produces an empty XHTML document without even attempting to parse the given document stream. Useful as a sentinel parser for unknown document types.
 (https://tika.apache.org/1.13/api/org/apache/tika/parser/EmptyParser.html)
+
+---
+Force application/pdf to be processed by EmptyParser
+--> both meta for X-Parsed-By changed to  org.apache.tika.parser.CompositeParser from org.apache.tika.parser.DefaultParser
+
+
