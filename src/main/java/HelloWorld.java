@@ -26,6 +26,7 @@ public class HelloWorld {
                 BodyContentHandler handler = new BodyContentHandler();
                 Metadata metadata = new Metadata();
                 ParseContext context = new ParseContext();
+                context.set(TikaConfig.class, config);
 
                 // Can we get EmptyParser from this?
                 // No... we get Parser for PDF: org.apache.tika.parser.CompositeParser
