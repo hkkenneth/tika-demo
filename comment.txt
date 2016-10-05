@@ -8,3 +8,11 @@ which
 Composite parser that delegates parsing tasks to a component parser based on the declared content type of the incoming document. A fallback parser is defined for cases where a parser for the given content type is not available.
 (https://tika.apache.org/1.13/api/org/apache/tika/parser/CompositeParser.html)
 
+
+
+Fallback:
+
+Fallback: org.apache.tika.parser.EmptyParser
+
+Dummy parser that always produces an empty XHTML document without even attempting to parse the given document stream. Useful as a sentinel parser for unknown document types.
+(https://tika.apache.org/1.13/api/org/apache/tika/parser/EmptyParser.html)
