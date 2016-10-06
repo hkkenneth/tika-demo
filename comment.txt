@@ -42,3 +42,7 @@ If we use AutoDetectParser with proper TIFF (no alpha?) as input - it does OCR a
 
 If we use tika config to force using OCR parser to handle image/tiff, it indeed performs OCR (with meta too!)
 But the parser name is still CompositeParser...
+
+Summary?
+It seems OCR is the default parser for image/tiff
+But when it fails to extract content - we kind of do not know whether OCR was attempted, whether the input TIFF is not in the right format, or even if tesseract is installed and configured properly?
