@@ -1,0 +1,15 @@
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:run
+Parsing testPdfOcr1.pdf
+File content : 
+
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.CompositeParser]
+Meta name: [Content-Type], Meta value: [application/pdf]
+Parser for tiff: org.apache.tika.parser.CompositeParser
+============================
+
+BUILD SUCCESSFUL
+
+Total time: 1.441 secs
