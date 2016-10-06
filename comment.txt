@@ -31,3 +31,11 @@ Alpha channel in the test Tiff..?
 
 http://stackoverflow.com/questions/5083492/tesseract-and-tiff-format-spp-not-in-set-1-3
 convert testTiff.tiff -background white -flatten +matte testTiff_noAlpha.tiff
+
+If we use TesseractOCRParser in the code...
+A strange thing is: we still get EmptyParser in the meta (and nothing else) after OCR is successful
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.EmptyParser]
+
+If we use AutoDetectParser with proper TIFF (no alpha?) as input - it does OCR automatically !?
+
+
