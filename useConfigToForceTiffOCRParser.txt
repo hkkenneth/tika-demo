@@ -1,0 +1,90 @@
+:compileJava UP-TO-DATE
+:processResources
+:classes
+:run
+Parsing testTiffOcr1.tiff
+File content : No.
+
+THE SLEREXE COMPANY LIMITED
+
+SAPORS LANE . BOOLE - DORSET - BHZS 8BR
+TELEPHONE acute (94513) 51617 - TELBX 123456
+
+Our Ref. 350/PJC/EAC 18th January, 1972.
+
+Dr. P.N. Cundall,
+Mining Surveys Ltd.,
+Holroyd Road,
+Reading,
+
+Berks.
+
+Dear Pete,
+
+Permit me to introduce you to the facility of facsimile
+transmission.
+
+In facsimile a photocell is caused to perform a raster scan over
+the Subject copy. The variations of print density on the document
+
+-cause the photocell to generate an analogous electrical video signal.
+
+This signal is used to modulate a carrier, which is transmitted to a
+remote destination over a radio or cable communications link.
+
+At the remote terminal, demodulation reconstructs the video
+signal, which is used to modulate the density of print produced by a
+printing device. This device is scanning in a raster scan synchronised
+with that at the transmitting terminal. As a result, a facsimile
+copy of the subject document is produced.
+
+Probably you have uses for this facility in yOur organisation.
+
+Yours sincerely,
+
+W.
+P.J. CROSS
+Group Leader - Facsimile Resaarch
+
+Registered in England: No. 2038
+Registered Office: 30 Vicar: Leno, Ilford. Enos.
+
+
+
+Meta name: [Fill Order], Meta value: [Normal]
+Meta name: [Compression], Meta value: [Uncompressed]
+Meta name: [tiff:ImageLength], Meta value: [3263]
+Meta name: [Samples Per Pixel], Meta value: [3 samples/pixel]
+Meta name: [Strip Offsets], Meta value: [8]
+Meta name: [tiff:ResolutionUnit], Meta value: [(No unit)]
+Meta name: [X Resolution], Meta value: [300 dots per (no unit)]
+Meta name: [Planar Configuration], Meta value: [Chunky (contiguous for each subsampling pixel)]
+Meta name: [Primary Chromaticities], Meta value: [2748779008/4294967295 1417339264/4294967295 1288490240/4294967295 2576980480/4294967295 644245120/4294967295 257698032/4294967295]
+Meta name: [Photometric Interpretation], Meta value: [RGB]
+Meta name: [File Size], Meta value: [24923110 bytes]
+Meta name: [Rows Per Strip], Meta value: [3263 rows/strip]
+Meta name: [File Name], Meta value: [apache-tika-8587024221412189285.tmp]
+Meta name: [tiff:BitsPerSample], Meta value: [8]
+Meta name: [Unknown tag (0x0129)], Meta value: [0 1]
+Meta name: [Content-Type], Meta value: [image/tiff]
+Meta name: [Strip Byte Counts], Meta value: [24922794 bytes]
+Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.CompositeParser]
+Meta name: [File Modified Date], Meta value: [Thu Oct 06 13:36:14 BST 2016]
+Meta name: [tiff:XResolution], Meta value: [300.0]
+Meta name: [tiff:SamplesPerPixel], Meta value: [3]
+Meta name: [Image Height], Meta value: [3263 pixels]
+Meta name: [Orientation], Meta value: [Top, left side (Horizontal / normal)]
+Meta name: [White Point], Meta value: [1343036288/4294967295 1413044224/4294967295]
+Meta name: [tiff:Orientation], Meta value: [1]
+Meta name: [Image Width], Meta value: [2546 pixels]
+Meta name: [Resolution Unit], Meta value: [(No unit)]
+Meta name: [tiff:ImageWidth], Meta value: [2546]
+Meta name: [tiff:YResolution], Meta value: [300.0]
+Meta name: [Bits Per Sample], Meta value: [8 8 8 bits/component/pixel]
+Meta name: [Y Resolution], Meta value: [300 dots per (no unit)]
+Parser for tiff: org.apache.tika.parser.CompositeParser
+============================
+
+BUILD SUCCESSFUL
+
+Total time: 4.377 secs

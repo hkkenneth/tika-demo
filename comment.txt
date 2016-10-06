@@ -38,4 +38,7 @@ Meta name: [X-Parsed-By], Meta value: [org.apache.tika.parser.EmptyParser]
 
 If we use AutoDetectParser with proper TIFF (no alpha?) as input - it does OCR automatically !?
 
+----
 
+If we use tika config to force using OCR parser to handle image/tiff, it indeed performs OCR (with meta too!)
+But the parser name is still CompositeParser...

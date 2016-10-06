@@ -3,5 +3,8 @@
         <parser class="org.apache.tika.parser.DefaultParser">
             <mime-exclude>image/tiff</mime-exclude>
         </parser>
+        <parser class="org.apache.tika.parser.ocr.TesseractOCRParser">
+            <mime>image/tiff</mime>
+        </parser>
     </parsers>
 </properties>
