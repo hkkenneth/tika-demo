@@ -1,10 +1,4 @@
 <properties>
     <parsers>
-        <parser class="org.apache.tika.parser.DefaultParser">
-            <mime-exclude>application/pdf</mime-exclude>
-        </parser>
-        <parser class="org.apache.tika.parser.ocr.TesseractOCRParser">
-            <mime>application/pdf</mime>
-        </parser>
     </parsers>
 </properties>

@@ -9,6 +9,7 @@
  buildscript {
      repositories {
          mavenCentral()
+         //maven { url "https://jitpack.io" }
      }
  }
 apply plugin: 'java'
@@ -28,11 +29,26 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    compile 'org.apache.tika:tika-parsers:1.13'
+    //compile 'org.apache.tika:tika-core:1.14'
+    //compile 'org.apache.tika:tika-parsers:1.14'
+    //compile 'com.github.apache:tika:master-SNAPSHOT'
+    compile files ('../tika/tika-app/target/tika-app-1.15-SNAPSHOT.jar')
 }
 
 run {
     if ( project.hasProperty("appArgs") ) {
         args Eval.me(appArgs)
     }
+}
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'HelloWorld'
+    )
+  }
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+  exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
 }
